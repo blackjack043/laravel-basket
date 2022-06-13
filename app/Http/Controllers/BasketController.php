@@ -14,7 +14,7 @@ class BasketController extends Controller
             $products = Basket::findOrFail($basket_id)->products;
             return view('basketindex',  ['products' => $products] );
         } else {
-            abort(404);
+            return view('basketindex',  ['products' => $products] );
         }
     }
 
